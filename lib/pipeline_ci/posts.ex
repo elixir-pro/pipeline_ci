@@ -4,10 +4,10 @@ defmodule PipelineCi.Posts do
   """
 
   import Ecto.Query, warn: false
+  alias PipelineCi.Posts.Post
   alias PipelineCi.Repo
 
-  alias PipelineCi.Posts.Post
-
+  @spec list_posts :: any
   @doc """
   Returns the list of posts.
 

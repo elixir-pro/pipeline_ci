@@ -4,6 +4,7 @@ defmodule PipelineCi.Application do
   @moduledoc false
 
   use Application
+  alias PipelineCiWeb.Endpoint
 
   def start(_type, _args) do
     children = [
@@ -14,7 +15,7 @@ defmodule PipelineCi.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: PipelineCi.PubSub},
       # Start the Endpoint (http/https)
-      PipelineCiWeb.Endpoint
+      Endpoint
       # Start a worker by calling: PipelineCi.Worker.start_link(arg)
       # {PipelineCi.Worker, arg}
     ]
@@ -28,7 +29,7 @@ defmodule PipelineCi.Application do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    PipelineCiWeb.Endpoint.config_change(changed, removed)
+    Endpoint.config_change(changed, removed)
     :ok
   end
 end

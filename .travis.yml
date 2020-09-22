@@ -14,4 +14,7 @@ cache:
     - deps
 script:
   - mix format --check-formatted --dry-run
+  - mix credo --strict
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
