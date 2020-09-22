@@ -12,4 +12,6 @@ cache:
   directories:
     - _build
     - deps
+script:
+  - mix format --check-formatted --dry-run
 
