@@ -54,7 +54,9 @@ defmodule PipelineCi.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:excoveralls, "~> 0.13.0", only: :test},
-      {:credo, "~> 1.5.0-rc.2", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.5.0-rc.2", only: [:dev, :test], runtime: false},
+      {:sobelow, "~> 0.8", only: :dev}
+
     ]
   end
 

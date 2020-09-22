@@ -7,7 +7,6 @@ defmodule PipelineCi.Posts do
   alias PipelineCi.Posts.Post
   alias PipelineCi.Repo
 
-  @spec list_posts :: any
   @doc """
   Returns the list of posts.
 
