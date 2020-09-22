@@ -56,7 +56,6 @@ defmodule PipelineCi.MixProject do
       {:excoveralls, "~> 0.13.0", only: :test},
       {:credo, "~> 1.5.0-rc.2", only: [:dev, :test], runtime: false},
       {:sobelow, "~> 0.8", only: :dev}
-
     ]
   end
 
